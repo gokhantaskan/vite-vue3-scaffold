@@ -1,0 +1,47 @@
+{
+  "name": "vite-project",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx,.vue . --ignore-path .gitignore --fix",
+    "cypress:open": "cypress open"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^1.0.4",
+    "vue": "^3.2.13",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.10.2",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "@vitejs/plugin-vue": "^1.9.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "cypress": "^8.5.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-vue": "^7.18.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.0",
+    "sass": "^1.42.1",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.2",
+    "vue-tsc": "^0.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "yarn lint"
+  },
+  "resolutions": {
+    "vscode-vue-languageservice": "0.27.xx"
+  }
+}
